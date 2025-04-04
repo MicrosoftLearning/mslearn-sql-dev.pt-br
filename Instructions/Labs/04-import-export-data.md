@@ -35,7 +35,7 @@ Esta etapa requer que você crie um banco de dados no Azure:
     |---|---|
     | Oferta gratuita sem servidor | Aplicar oferta |
     | Assinatura | Sua assinatura |
-    | Grupo de recursos | Selecionar ou criar um grupo de recursos |
+    | Grupo de recursos | Selecione ou crie um novo grupo de recursos |
     | Nome do banco de dados | **MyDB** |
     | Servidor | Selecione ou crie um novo servidor |
     | Método de autenticação | Autenticação do SQL |
@@ -81,7 +81,7 @@ Vamos começar criando uma conta de armazenamento do Azure.
     | Configuração | Valor |
     |---|---|
     | Subscription | Sua assinatura |
-    | Grupo de recursos | Selecionar ou criar um grupo de recursos |
+    | Grupo de recursos | Selecione ou crie um novo grupo de recursos |
     | Nome da conta de armazenamento | Escolha um nome globalmente exclusivo |
     | Region | Selecione a região mais próxima de você |
     | Serviço principal | **Armazenamento de Blobs do Azure ou Azure Data Lake Storage Gen2** |
@@ -151,7 +151,7 @@ Precisamos começar criando uma **Chave Mestra** e uma **Credencial com Escopo d
     SECRET = '<your-sas-token>';
     ```
 
-    Substitua ***<your-sas-token>*** pelo **token SAS de Blob** gerado anteriormente.
+    Substitua <your-sas-token> pelo token SAS de Blob gerado anteriormente.
 
 1. Por fim, você precisa de uma **Fonte de Dados** para acessar o Armazenamento de Blobs do Azure. Execute o seguinte comando SQL para criar uma **Fonte de Dados**:
 
@@ -164,7 +164,7 @@ Precisamos começar criando uma **Chave Mestra** e uma **Credencial com Escopo d
     );
     ```
 
-    Substitua ***<your-storage-account-name>*** pelo nome da sua Conta de Armazenamento do Azure.
+    Substitua <your-storage-account-name> pelo nome da sua Conta de Armazenamento do Azure.
 
 Agora tudo está configurado para importar os dados do arquivo **employees.json** para o *Banco de Dados SQL do Azure*.
 
