@@ -151,7 +151,7 @@ Precisamos começar criando uma **Chave Mestra** e uma **Credencial com Escopo d
     SECRET = '<your-sas-token>';
     ```
 
-    Substitua <your-sas-token> pelo token SAS de Blob gerado anteriormente.
+    Substitua \<your-sas-token\> elo token SAS de Blob gerado anteriormente.
 
 1. Por fim, você precisa de uma **Fonte de Dados** para acessar o Armazenamento de Blobs do Azure. Execute o seguinte comando SQL para criar uma **Fonte de Dados**:
 
@@ -164,7 +164,7 @@ Precisamos começar criando uma **Chave Mestra** e uma **Credencial com Escopo d
     );
     ```
 
-    Substitua <your-storage-account-name> pelo nome da sua Conta de Armazenamento do Azure.
+    Substitua \<your-storage-account-name\> pelo nome da sua conta de armazenamento do Azure.
 
 Agora tudo está configurado para importar os dados do arquivo **employees.json** para o *Banco de Dados SQL do Azure*.
 
