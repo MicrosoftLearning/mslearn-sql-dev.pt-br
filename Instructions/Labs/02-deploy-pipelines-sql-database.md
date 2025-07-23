@@ -80,7 +80,7 @@ Um projeto do Banco de Dados SQL do Azure no Visual Studio permite que você des
 1. No Visual Studio Code, selecione **Exibir** > **Paleta de Comandos**.
 1. Na paleta de comandos, digite `Database projects: New` e selecione-o.
     > **Observação:** pode levar alguns minutos para instalar o serviço de ferramentas SQL para a extensão mssql.
-1. Selecione **Banco de Dados SQL do Azure**.
+1. Selecione o **Banco de Dados SQL do Azure**.
 1. Digite o nome **MyDBProj** e pressione **Enter** para confirmar.
 1. Selecione a pasta do repositório GitHub clonado para salvar o projeto.
 1. Para **Projetos no estilo SDK**, selecione **Sim (recomendado)**.
@@ -173,6 +173,7 @@ O GitHub Actions permite que você automatize, personalize e execute seus fluxos
 1. Selecione o link **configurar um fluxo de trabalho você mesmo**.
 1. Copie o código abaixo em seu **arquivo main.yml** . O código inclui as etapas para criar e implantar seu projeto de banco de dados.
 
+    {% raw %}
     ```yaml
     name: Build and Deploy SQL Database Project
     on:
@@ -208,8 +209,9 @@ O GitHub Actions permite que você automatize, personalize e execute seus fluxos
               action: 'publish'
               build-arguments: '-c Release'
               arguments: '/p:DropObjectsNotInSource=true'  # Optional: Customize as needed
-      ```
-
+    ```
+    {% endraw %}
+   
       A etapa **Criar e implantar projeto SQL** no seu arquivo YAML se conecta ao seu Banco de Dados SQL do Azure usando a sequência de conexão armazenada no `AZURE_CONN_STRING` segredo. A ação especifica o caminho para o arquivo do projeto SQL, define a ação para publicar para implantar o projeto e inclui argumentos de compilação para compilar no modo Versão. Além disso, ele usa o argumento `/p:DropObjectsNotInSource=true` para garantir que quaisquer objetos não presentes na origem sejam removidos do banco de dados de destino durante a implantação.
 
 1. Confirme as alterações.
